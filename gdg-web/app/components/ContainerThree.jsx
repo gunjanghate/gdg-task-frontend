@@ -321,7 +321,6 @@ const ContainerThree = () => {
           </div>
         </div>
         <div className="tect-down mt-20 flex flex-col justify-evenly gap-12">
-          {/* Accordion Section 1 */}
           <div className="tech1 flex">
             <div className="cont-tech1 flex flex-col justify-center items-center ">
               <div className="dash rounded lg h-1 w-28 bg-red-500"></div>
@@ -334,14 +333,12 @@ const ContainerThree = () => {
                   height={100}
                 />
                 <div className="ins-txt text-gray-600 text-lg">Android</div>
-                <div className="arrw pl-10" onClick={toggleOpen1}>
+                <div className="arrw pl-10" >
                   <IoIosArrowDown />
                 </div>
               </div>
-              {open1 && <div className="accordion-content">Android content goes here...</div>}
             </div>
           </div>
-          {/* Accordion Section 2 */}
           <div className="tech2 flex">
             <div className="cont-tech1 flex flex-col justify-center items-center ">
               <div className="dash rounded lg h-1 w-28 bg-blue-500"></div>
@@ -354,14 +351,13 @@ const ContainerThree = () => {
                   height={100}
                 />
                 <div className="ins-txt text-gray-600 text-lg">Flutter</div>
-                <div className="arrw pl-10" onClick={toggleOpen2}>
+                <div className="arrw pl-10">
                   <IoIosArrowDown />
                 </div>
               </div>
-              {open2 && <div className="accordion-content">Flutter content goes here...</div>}
+ 
             </div>
           </div>
-          {/* Accordion Section 3 */}
           <div className="tech3 flex">
             <div className="cont-tech1 flex flex-col justify-center items-center ">
               <div className="dash rounded lg h-1 w-28 bg-green-500"></div>
@@ -374,19 +370,217 @@ const ContainerThree = () => {
                   height={100}
                 />
                 <div className="ins-txt text-gray-600 text-lg">Cloud</div>
-                <div className="arrw pl-10" onClick={toggleOpen3}>
+                <div className="arrw pl-10">
                   <IoIosArrowDown />
                 </div>
               </div>
-              {open3 && <div className="accordion-content">React content goes here...</div>}
             </div>
           </div>
-
         </div>
+      </div>
+      <div className="FAQ flex flex-col justify-center items-center mb-14">
+        <div className="faq-head text-4xl font-semibold text-gray-600">
+          {" "}
+          FAQs
+        </div>
+        <div className="que1 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-gray-300 rounded-2xl shadow-md">
+          <div
+            onClick={toggleOpen1}
+            className="flex justify-center gap-2 lg:justify-between pl-5 pr-12 lg:pr-96 items-center px-4 py-3 cursor-pointer rounded-lg"
+          >
+            <span
+              className={`transform transition-transform duration-300 ${
+                open1
+                 ? "rotate-180" : ""
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="red"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+            <h3 className="text-lg font-semibold rounded-lg">What is GDG?</h3>
+          </div>
+        </div>
+        {open1 && (
+          <div className="px-4 py-4 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-l-red-500 border-gray-300 rounded-2xl shadow-md">
+            <p className="text-gray-600">
+              Google Developer Groups (GDG) are community groups for college and
+              university students interested in Google developer technologies.
+              Students from all undergraduate or graduate programs with an
+              interest in growing as a developer are welcome. By joining a GDG,
+              students grow their knowledge in a peer-to-peer learning
+              environment and build solutions for local businesses and their
+              community.
+            </p>
+          </div>
+        )}
+        <div className="que2 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-gray-300 rounded-2xl shadow-md">
+          <div
+            onClick={toggleOpen2}
+            className="flex gap-3 justify-center  lg:justify-between lg:pr-44 items-center px-4 py-3 cursor-pointer rounded-lg"
+          >
+            <span
+              className={`transform transition-transform duration-300 ${
+                open2 ? "rotate-180" : ""
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="green"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+            <h3 className="text-lg font-semibold rounded-lg lg:ml-12 ">
+              How can you become a part of GDG ?
+            </h3>
+          </div>
+        </div>
+        {open2 && (
+          <div className="px-4 py-4 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-l-green-500 border-gray-300 rounded-2xl shadow-md">
+            <p className="text-gray-600">
+              We conduct an annual team recruitment process. The details of
+              recruitment are posted online a few weeks prior. It’s a two step
+              process involving form filling and personal interview. Students
+              acing both rounds are selected to be the part of the core team.
+            </p>
+          </div>
+        )}
+        <div className="que3 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-gray-300 rounded-2xl shadow-md">
+          <div
+            onClick={toggleOpen3}
+            className="flex gap-3 justify-center lg:justify-between pl-5 lg:pr-64 items-center px-4 py-3 cursor-pointer rounded-lg"
+          >
+            <span
+              className={`transform transition-transform duration-300 ${
+                open3 ? "rotate-180" : ""
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="blue"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+            <h3 className="text-lg font-semibold rounded-lg lg:ml-12 w-3/4">
+              What does a GDG Lead do?
+            </h3>
+          </div>
+        </div>
+        {open3 && (
+          <div className="px-4 py-4 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-l-blue-500 border-gray-300 rounded-2xl shadow-md">
+            <p className="text-gray-600">
+              A GDG Lead fills a lot of shoes. He works with the university to
+              build the club, recruit the core team, host workshops, build
+              projects, collaborate with local partners.
+            </p>
+          </div>
+        )}
+        <div className="que4 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-gray-300 rounded-2xl shadow-md">
+          <div
+            onClick={toggleOpen4}
+            className="flex gap-3 justify-center lg:justify-between pl-5 lg:pr-52 items-center px-4 py-3 cursor-pointer rounded-lg"
+          >
+            <span
+              className={`transform transition-transform duration-300 ${
+                open4 ? "rotate-180" : ""
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="orange"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+            <h3 className="text-lg font-semibold rounded-lg lg:ml-12 w-3/4">
+              How is DSC related to Google?
+            </h3>
+          </div>
+        </div>
+        {open4 && (
+          <div className="px-4 py-4 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-l-yellow-500 border-gray-300 rounded-2xl shadow-md">
+            <p className="text-gray-600">
+              A GDG Lead fills a lot of shoes. He works with the university to
+              build the club, recruit the core team, host workshops, build
+              projects, collaborate with local partners.
+            </p>
+          </div>
+        )}
+        <div className="que5 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-gray-300 rounded-2xl shadow-md">
+          <div
+            onClick={toggleOpen5}
+            className="flex gap-3 justify-center lg:justify-between pl-5 lg:pr-80 items-center px-4 py-3 cursor-pointer rounded-lg"
+          >
+            <span
+              className={`transform transition-transform duration-300 ${
+                open5 ? "rotate-180" : ""
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="red"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </span>
+            <h3 className="text-lg font-semibold rounded-lg lg:ml-12 w-3/4">
+              How to reach us?
+            </h3>
+          </div>
+        </div>
+        {open5 && (
+          <div className="px-4 py-4 w-1/2 mx-auto mt-10 border-x-8 border-y-8 border-l-red-500 border-gray-300 rounded-2xl shadow-md">
+            <p className="text-gray-600">Mail us at "dsc.rknec@gmail.com "</p>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default ContainerThree;
-
