@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import {default as gdg} from '../assests/gdg.png';
 const Container = () => {
   return (
     <div className="main flex flex-col my-4">
+      {/* {gdg} */}
       <div className="name-main flex flex-col mt-12 justify-center text-center">
         <div className="google-text flex gap-2 justify-center ">
           <div className="word1 flex ">
@@ -22,13 +24,14 @@ const Container = () => {
       </div>
       <div className="part2-main flex flex-col justify-center text-center">
         <div className="img-people pl-20 md:pl:44 md:ml-32 lg:pl-96 lg:ml-5">
-          <Image
+          {/* <Image
             // src="https://tse3.mm.bing.net/th?id=OIP.cgK8zb-EiOmq_9XGolXF2QHaGB&pid=Api&P=0&h=180"
             src="https://drive.google.com/uc?export=view&id=11XvmtMiO8JOlhIHcGNd-_dch2bbYEz4X
 "
             width={500}
             height={500}
-          />
+          /> */}
+          <img src={gdg.src} alt="GDG Image" />
         </div>
         <div className="txt-below-gdg-people text-gray-600 font-bold px-12 text-wrap md:px-32 lg:px-80 lg:mx-12 part2-main">
           Google Developer Groups are community groups for college and
