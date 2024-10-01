@@ -23,17 +23,17 @@ const ContainerThree = () => {
       <div className="tech flex flex-col justify-center text-center items-center mb-32">
         <div className="tech-up">
           <div className="up1 flex justify-between gap-5">
-            <div className="up11 bg-red-500 w-32 lg:w-72 h-1 mt-5"></div>
+            <div className="up11 bg-red-500 w-12 lg:w-72 h-1 mt-5"></div>
             <div className="up22 text-4xl font-semibold text-gray-600">
               Technologies
             </div>
-            <div className="up33 bg-red-500 w-32 lg:w-72 h-1 mt-5"></div>
+            <div className="up33 bg-red-500 w-16 lg:w-72 h-1 mt-5"></div>
           </div>
           <div className="up2 text-md mt-1 font-semibold text-gray-600">
             Domains That Excite Us to Collaborate and Teach!
           </div>
         </div>
-        <div className="tect-down mt-20 flex flex-col justify-evenly gap-12">
+        <div className="tect-down lg:flex-row mt-20 flex flex-col justify-evenly gap-12">
           <div className="tech1 flex">
             <div className="cont-tech1 flex flex-col justify-center items-center ">
               <div className="dash rounded lg h-1 w-28 bg-red-500"></div>

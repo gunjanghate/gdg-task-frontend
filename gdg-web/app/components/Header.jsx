@@ -4,26 +4,22 @@ import Image from "next/image";
 import { useColorMode } from "@chakra-ui/react";
 import { LuMoon } from "react-icons/lu";
 import { MdOutlineWbSunny } from "react-icons/md";
-import { FiMenu, FiX } from "react-icons/fi"; // Hamburger menu icons
+import { FiMenu, FiX } from "react-icons/fi"; 
+import { default as logo } from "../assests/logo.png";
 
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [menuOpen, setMenuOpen] = useState(false); // State to manage menu visibility
+  const [menuOpen, setMenuOpen] = useState(false); 
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <div className="flex justify-between  md:px-10 px-2 shadow-md ">
-      <div className="logo flex">
-        <Image
-          src="https://drive.google.com/uc?export=view&id=1VMU953Hb1UIBJLvY8iNIqdX4XIY9wPBJ"
-          width={110}
-          height={50}
-          alt="Logo"
-        />
-        <span className="grey-txt font-bold text-l pt-6 ml-2">GDG RCOEM</span>
+    <div className="flex justify-between md:px-10 px-2 shadow-md h-24">
+      <div className="logo flex mt-2">
+      <img src={logo.src} alt="Logo Image" className="w-36 h-20" />
+        <span className="grey-txt w-32 font-bold text-xl pt-7 ml-2">GDG RCOEM</span>
       </div>
 
       <div className="md:hidden text-2xl mt-5" onClick={toggleMenu}>
